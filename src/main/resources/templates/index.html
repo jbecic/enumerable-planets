@@ -9,6 +9,18 @@
 </head>
 <body>
 <h1>Pick a planet:</h1>
-
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th>Planet</th>
+        <th>Year Length</th>
+    </tr>
+    </thead>
+    <tr th:each="planet : ${planets}">
+        <td th:text="${planet.name}">Planet Name</td>
+        <td th:text="${planet.yearLength}">Year Length</td>
+    </tr>
+</table>
+<p>The "Year Length" column represents how many Earth days are necessary for the planet to go around the sun once.</p>
 </body>
 </html>
